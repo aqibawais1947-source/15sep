@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>siuu</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Card</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Intro text above letter emoji -->
   <h4 class="introText">Ohh you Opened it? WOW mind blowingg </h4>
 
-  <!-- Heart Letter Emoji (start screen) -->
-  <div class="letterIcon" id="letterIcon" onclick="showLetter()">
-    ✉️
-  </div>
+  <div class="letterIcon" id="letterIcon" onclick="showLetter()">✉️</div>
 
-  <!-- Letter Box (message) -->
   <div class="letterBox" id="letterBox">
-    <P>
-<b>September 15 </b>
-
-      </P>
-      <P>
+    <p><b>September 15 </b></p>
+    <p>
       sounds scary, right? Just kidding.
       But it is a day that means something to me.
       And I made something dar dar keh haha 💌
@@ -32,7 +21,6 @@
     <p class="continueText" onclick="showCard()">see more...</p>
   </div>
 
-  <!-- Birthday Card -->
   <div class="birthdayCard" id="birthdayCard">
     <div class="cardFront">
       <h3 class="happy">HAPPIEST BIRTHDAY 🌷 </h3>
@@ -56,6 +44,9 @@
     </div>
   </div>
 
+  <!-- Open Button -->
+  <button class="openBtn" id="openBtn" style="display:none;" onclick="openCard()">Open Card</button>
+
   <script>
     function showLetter() {
       document.getElementById("letterIcon").style.display = "none";
@@ -66,9 +57,13 @@
     function showCard() {
       document.getElementById("letterBox").style.display = "none";
       document.getElementById("birthdayCard").style.display = "block";
+      document.getElementById("openBtn").style.display = "inline-block";
+    }
+
+    function openCard() {
+      document.getElementById("birthdayCard").classList.add("open");
+      document.getElementById("openBtn").style.display = "none";
     }
   </script>
 </body>
-
 </html>
-
