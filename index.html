@@ -44,8 +44,11 @@
     </div>
   </div>
 
-  <!-- Open Button -->
-  <button class="openBtn" id="openBtn" style="display:none;" onclick="openCard()">Open Card</button>
+  <!-- Control Buttons -->
+  <div class="controls" id="controls" style="display:none;">
+    <button class="openBtn" onclick="openCard()">Open Card</button>
+    <button class="closeBtn" onclick="closeCard()">Close Card</button>
+  </div>
 
   <script>
     function showLetter() {
@@ -57,12 +60,15 @@
     function showCard() {
       document.getElementById("letterBox").style.display = "none";
       document.getElementById("birthdayCard").style.display = "block";
-      document.getElementById("openBtn").style.display = "inline-block";
+      document.getElementById("controls").style.display = "block";
     }
 
     function openCard() {
       document.getElementById("birthdayCard").classList.add("open");
-      document.getElementById("openBtn").style.display = "none";
+    }
+
+    function closeCard() {
+      document.getElementById("birthdayCard").classList.remove("open");
     }
   </script>
 </body>
