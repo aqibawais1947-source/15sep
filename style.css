@@ -167,15 +167,20 @@ p {
   margin: 30px;
 }
 
-/* Open Button */
-.openBtn {
+/* Control Buttons */
+.controls {
   margin-top: 15px;
+}
+.openBtn,
+.closeBtn {
   font-size: 14px;
   background: none;
   border: none;
   color: #fff;
   cursor: pointer;
+  margin: 0 10px;
 }
-.openBtn:hover {
+.openBtn:hover,
+.closeBtn:hover {
   color: #f98c6e;
 }
